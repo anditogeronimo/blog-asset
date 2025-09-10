@@ -5,24 +5,6 @@ const jo = {};
     const windowObj = window;
     const documentObj = document;
     
-     // ===== CONFIGURATION VARIABLES =====
-    // Gunakan window scope untuk variables dari custom.js
-    const isPreview = windowObj.isPreview !== undefined ? windowObj.isPreview : "";
-    const siteUrl = windowObj.siteUrl !== undefined ? windowObj.siteUrl : "";
-    const blogId = windowObj.blogId !== undefined ? windowObj.blogId : "";
-    const blogTitle = windowObj.blogTitle !== undefined ? windowObj.blogTitle : "";
-    const titleSeparator = windowObj.titleSeparator !== undefined ? windowObj.titleSeparator : " - ";
-    const pageTitle = windowObj.pageTitle !== undefined ? windowObj.pageTitle : "Page";
-    const analyticId = windowObj.analyticId !== undefined ? windowObj.analyticId : false;
-    const caPubAdsense = windowObj.caPubAdsense !== undefined ? windowObj.caPubAdsense : false;
-    const adsenseClientId = caPubAdsense ? "ca-pub-" + caPubAdsense : false;
-    const innerAdsDelimiter = windowObj.innerAdsDelimiter !== undefined ? windowObj.innerAdsDelimiter : "p,br,div";
-    const ignoreAdsDelimiter = windowObj.ignoreAdsDelimiter !== undefined ? windowObj.ignoreAdsDelimiter : "pre,ul,ol,table,blockquote";
-    const autoTOC = windowObj.autoTOC !== undefined ? windowObj.autoTOC : false;
-    const tocTemplate = typeof windowObj.toc_temp === functionStr ? windowObj.toc_temp : false;
-    const positionTOC = windowObj.positionTOC !== undefined ? windowObj.positionTOC : false;
-    const jetCallback = typeof windowObj.jtCallback === functionStr ? windowObj.jtCallback : false;
-    
     // Timing functions
     const setTimeoutFunc = setTimeout;
     const clearTimeoutFunc = clearTimeout;
