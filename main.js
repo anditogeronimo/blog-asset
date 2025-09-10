@@ -5,6 +5,23 @@ const jo = {};
     const windowObj = window;
     const documentObj = document;
     
+        // Configuration variables dengan fallback untuk custom.js
+    const isPreview = typeof isPreview !== undefinedStr ? isPreview : "";
+    const siteUrl = typeof siteUrl !== undefinedStr ? siteUrl : "";
+    const blogId = typeof blogId !== undefinedStr ? blogId : "";
+    const blogTitle = typeof blogTitle !== undefinedStr ? blogTitle : "";
+    const titleSeparator = typeof titleSeparator !== undefinedStr ? titleSeparator : " - ";
+    const pageTitle = typeof pageTitle !== undefinedStr ? pageTitle : "Page";
+    const analyticId = typeof analyticId !== undefinedStr ? analyticId : false;
+    const caPubAdsense = typeof caPubAdsense !== undefinedStr ? caPubAdsense : false;
+    const adsenseClientId = caPubAdsense ? "ca-pub-" + caPubAdsense : false;
+    const innerAdsDelimiter = typeof innerAdsDelimiter !== undefinedStr ? innerAdsDelimiter : "p,br,div";
+    const ignoreAdsDelimiter = typeof ignoreAdsDelimiter !== undefinedStr ? ignoreAdsDelimiter : "pre,ul,ol,table,blockquote";
+    const autoTOC = typeof autoTOC !== undefinedStr ? autoTOC : false;
+    const tocTemplate = typeof toc_temp === functionStr ? toc_temp : false;
+    const positionTOC = typeof positionTOC !== undefinedStr ? positionTOC : false;
+    const jetCallback = typeof jtCallback === functionStr ? jtCallback : false;
+    
     // Timing functions
     const setTimeoutFunc = setTimeout;
     const clearTimeoutFunc = clearTimeout;
@@ -154,23 +171,6 @@ const jo = {};
     const rwSuffixStr = "-rw";
     const devicePixelRatioStr = "devicePixelRatio";
     const mountStr = "mount";
-    
-    // Configuration variables dengan fallback untuk custom.js
-    const isPreview = typeof isPreview !== undefinedStr ? isPreview : "";
-    const siteUrl = typeof siteUrl !== undefinedStr ? siteUrl : "";
-    const blogId = typeof blogId !== undefinedStr ? blogId : "";
-    const blogTitle = typeof blogTitle !== undefinedStr ? blogTitle : "";
-    const titleSeparator = typeof titleSeparator !== undefinedStr ? titleSeparator : " - ";
-    const pageTitle = typeof pageTitle !== undefinedStr ? pageTitle : "Page";
-    const analyticId = typeof analyticId !== undefinedStr ? analyticId : false;
-    const caPubAdsense = typeof caPubAdsense !== undefinedStr ? caPubAdsense : false;
-    const adsenseClientId = caPubAdsense ? "ca-pub-" + caPubAdsense : false;
-    const innerAdsDelimiter = typeof innerAdsDelimiter !== undefinedStr ? innerAdsDelimiter : "p,br,div";
-    const ignoreAdsDelimiter = typeof ignoreAdsDelimiter !== undefinedStr ? ignoreAdsDelimiter : "pre,ul,ol,table,blockquote";
-    const autoTOC = typeof autoTOC !== undefinedStr ? autoTOC : false;
-    const tocTemplate = typeof toc_temp === functionStr ? toc_temp : false;
-    const positionTOC = typeof positionTOC !== undefinedStr ? positionTOC : false;
-    const jetCallback = typeof jtCallback === functionStr ? jtCallback : false;
 
     // Utility functions
     function hasClass(element, className) {
