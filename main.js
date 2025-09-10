@@ -5,22 +5,23 @@ const jo = {};
     const windowObj = window;
     const documentObj = document;
     
-        // Configuration variables dengan fallback untuk custom.js
-    const isPreview = typeof isPreview !== undefinedStr ? isPreview : "";
-    const siteUrl = typeof siteUrl !== undefinedStr ? siteUrl : "";
-    const blogId = typeof blogId !== undefinedStr ? blogId : "";
-    const blogTitle = typeof blogTitle !== undefinedStr ? blogTitle : "";
-    const titleSeparator = typeof titleSeparator !== undefinedStr ? titleSeparator : " - ";
-    const pageTitle = typeof pageTitle !== undefinedStr ? pageTitle : "Page";
-    const analyticId = typeof analyticId !== undefinedStr ? analyticId : false;
-    const caPubAdsense = typeof caPubAdsense !== undefinedStr ? caPubAdsense : false;
+     // ===== CONFIGURATION VARIABLES =====
+    // Gunakan window scope untuk variables dari custom.js
+    const isPreview = windowObj.isPreview !== undefined ? windowObj.isPreview : "";
+    const siteUrl = windowObj.siteUrl !== undefined ? windowObj.siteUrl : "";
+    const blogId = windowObj.blogId !== undefined ? windowObj.blogId : "";
+    const blogTitle = windowObj.blogTitle !== undefined ? windowObj.blogTitle : "";
+    const titleSeparator = windowObj.titleSeparator !== undefined ? windowObj.titleSeparator : " - ";
+    const pageTitle = windowObj.pageTitle !== undefined ? windowObj.pageTitle : "Page";
+    const analyticId = windowObj.analyticId !== undefined ? windowObj.analyticId : false;
+    const caPubAdsense = windowObj.caPubAdsense !== undefined ? windowObj.caPubAdsense : false;
     const adsenseClientId = caPubAdsense ? "ca-pub-" + caPubAdsense : false;
-    const innerAdsDelimiter = typeof innerAdsDelimiter !== undefinedStr ? innerAdsDelimiter : "p,br,div";
-    const ignoreAdsDelimiter = typeof ignoreAdsDelimiter !== undefinedStr ? ignoreAdsDelimiter : "pre,ul,ol,table,blockquote";
-    const autoTOC = typeof autoTOC !== undefinedStr ? autoTOC : false;
-    const tocTemplate = typeof toc_temp === functionStr ? toc_temp : false;
-    const positionTOC = typeof positionTOC !== undefinedStr ? positionTOC : false;
-    const jetCallback = typeof jtCallback === functionStr ? jtCallback : false;
+    const innerAdsDelimiter = windowObj.innerAdsDelimiter !== undefined ? windowObj.innerAdsDelimiter : "p,br,div";
+    const ignoreAdsDelimiter = windowObj.ignoreAdsDelimiter !== undefined ? windowObj.ignoreAdsDelimiter : "pre,ul,ol,table,blockquote";
+    const autoTOC = windowObj.autoTOC !== undefined ? windowObj.autoTOC : false;
+    const tocTemplate = typeof windowObj.toc_temp === functionStr ? windowObj.toc_temp : false;
+    const positionTOC = windowObj.positionTOC !== undefined ? windowObj.positionTOC : false;
+    const jetCallback = typeof windowObj.jtCallback === functionStr ? windowObj.jtCallback : false;
     
     // Timing functions
     const setTimeoutFunc = setTimeout;
